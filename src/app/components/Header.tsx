@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Header = () => {
@@ -14,28 +15,39 @@ const Header = () => {
 
           {/* Navigation */}
           <nav className="hidden md:flex space-x-8 text-sm font-medium text-gray-700">
-            <a href="#services" className="hover:text-blue-600 transition">
+
+
+        
+          <li>
+            <Link href="/" className="hover:text-blue-600 transition">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link href="/about" className="hover:text-blue-600 transition">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link href="/services" className="hover:text-blue-600 transition">
               Services
-            </a>
-            <a href="#about" className="hover:text-blue-600 transition">
-              About Us
-            </a>
-            <a href="#solutions" className="hover:text-blue-600 transition">
-              Solutions
-            </a>
-            <a href="#contact" className="hover:text-blue-600 transition">
-              Contact
-            </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/contact" className="hover:text-blue-600 transition">
+             Contact
+            </Link>
+            </li>
+           
           </nav>
 
           {/* CTA */}
           <div className="hidden md:block">
-            <a
-              href="#contact"
+            <Link href="/contact"
               className="inline-block px-5 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
             >
               Book a Free Call
-            </a>
+            </Link>
           </div>
         </div>
       </div>

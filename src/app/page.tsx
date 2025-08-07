@@ -86,7 +86,7 @@ const Home = () => {
       <section id="contact" className="bg-purple-700 text-white py-16 px-6 text-center">
         <h2 className="text-3xl font-bold mb-6">Let’s Build Something Great Together</h2>
         <p className="mb-8 max-w-xl mx-auto">
-          Whether you're looking to automate, analyze, or improve—let us help you get there. Reach out for a free 30-minute consultation.
+          Whether you&apos;re looking to automate, analyze, or improve—let us help you get there. Reach out for a free 30-minute consultation.
         </p>
         <a
           href="mailto:youremail@example.com"
