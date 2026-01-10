@@ -20,6 +20,30 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Environment Variables
+
+This project includes a chat widget that requires environment variables to be configured. Create a `.env.local` file in the root directory with the following variables:
+
+### Required Variables
+- `OPENAI_API_KEY` - Your OpenAI API key for the chat functionality
+
+### Optional Variables
+- `NEXT_PUBLIC_CHAT_ENABLED` - Set to 'true' to enable the chat widget (default: true)
+- `NEXT_PUBLIC_CHAT_TITLE` - The title displayed in the chat widget (default: 'GJS Corp')
+- `NEXT_PUBLIC_CHAT_SUBTITLE` - The subtitle displayed in the chat widget (default: 'AI Assistant')
+- `NEXT_PUBLIC_CHAT_PLACEHOLDER` - The placeholder text in the chat input (default: 'Ask about automation, Power BI, or ETL...')
+- `NEXT_PUBLIC_CHAT_SYSTEM_MESSAGE` - The system message for the AI assistant (default: GJS Corp assistant message)
+
+### Example .env.local file:
+```env
+OPENAI_API_KEY=your_openai_api_key_here
+NEXT_PUBLIC_CHAT_ENABLED=true
+NEXT_PUBLIC_CHAT_TITLE=GJS Corp
+NEXT_PUBLIC_CHAT_SUBTITLE=AI Assistant
+NEXT_PUBLIC_CHAT_PLACEHOLDER=Ask about automation, Power BI, or ETL...
+NEXT_PUBLIC_CHAT_SYSTEM_MESSAGE=You are GJS Corp's friendly assistant. Keep answers clear, concise, and business-focused; give examples when helpful.
+```
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

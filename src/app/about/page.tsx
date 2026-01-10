@@ -52,15 +52,15 @@ export default function About() {
           variants={fadeUp}
           custom={0}
         >
-          About MyAgency
+          About GJS Corp
         </motion.h1>
 
         <div className="max-w-4xl mx-auto space-y-8 mb-20 text-gray-700 text-lg leading-relaxed">
           {[
-            "At MyAgency, we specialize in helping businesses leverage the power of automation, data analytics, and cloud technologies to optimize operations and unlock new growth opportunities. Whether you’re a startup looking to build scalable workflows or an established enterprise aiming to improve efficiency, we tailor solutions to your unique needs.",
+            "At GJS Corp, we specialize in helping businesses leverage the power of automation, data analytics, and cloud technologies to optimize operations and unlock new growth opportunities. Whether you’re a startup looking to build scalable workflows or an established enterprise aiming to improve efficiency, we tailor solutions to your unique needs.",
             "Our team has deep expertise in cloud platforms such as Azure, powerful BI tools like Power BI, and advanced automation frameworks. We integrate these tools seamlessly with AI-powered solutions to bring cutting-edge innovation to your business processes.",
             "We understand that each business faces distinct challenges when it comes to managing data, automating repetitive tasks, and making data-driven decisions. That’s why we focus on creating end-to-end pipelines and dashboards that are intuitive, reliable, and scalable — empowering you to focus on what matters most: growing your business.",
-            "Founded by experts with backgrounds in full-stack development, data science, and cloud architecture, MyAgency is committed to delivering exceptional results and outstanding customer support. Our mission is simple: to help you save time, reduce manual errors, and gain actionable insights that drive smarter decisions.",
+            "Founded by experts with backgrounds in full-stack development, data science, and cloud architecture, GJS Corp is committed to delivering exceptional results and outstanding customer support. Our mission is simple: to help you save time, reduce manual errors, and gain actionable insights that drive smarter decisions.",
             "Beyond technology, we believe in building strong partnerships with our clients. Your success is our success. We work closely with you through every step of the journey, from strategy and implementation to ongoing support and optimization.",
           ].map((paragraph, i) => (
             <motion.p

@@ -16,13 +16,13 @@ const Header = () => {
             <Link href="/" className="flex items-center space-x-2">
               <Image
                 src="/Sky Query Lab.jpeg"
-                alt="Sky Query Lab Logo"
+                alt="GJS Corp Logo"
                 width={40}
                 height={40}
                 className="object-contain"
               />
               <span className="text-2xl font-bold text-blue-600 tracking-tight">
-                Sky Query Labs
+                GJS Corp
               </span>
             </Link>
           </div>

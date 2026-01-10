@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import ChatWidget from "./components/ChatWidget";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: 'My Agency',
+  title: 'GJS Corp',
   description: 'Automation and data consulting',
 };
 export default function RootLayout({
@@ -28,6 +29,7 @@ export default function RootLayout({
       <body className="flex flex-col min-h-screen">
         <Header />
         <main className="flex-grow">{children}</main>
+        <ChatWidget />
       </body>
     </html>
   );
