@@ -232,7 +232,7 @@ const Home = () => {
           Whether you&apos;re looking to automate, analyze, or improve — let us help you get there. Reach out for a free 30-minute consultation.
         </motion.p>
         <motion.a
-          href="mailto:youremail@example.com"
+          href="mailto:gaganjot165@gmail.com"
           className="inline-block bg-white text-blue-700 font-semibold py-4 px-10 rounded-full shadow-lg hover:shadow-xl transition transform hover:scale-105"
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}

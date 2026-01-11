@@ -46,7 +46,7 @@ const Header = () => {
           {/* Desktop CTA */}
           <div className="hidden md:block">
             <a
-              href="https://calendly.com/d/cs3b-79s-mj3/30-minute-meeting"
+              href="https://calendly.com/gaganjot165/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-5 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"

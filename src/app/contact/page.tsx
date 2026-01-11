@@ -15,10 +15,24 @@ export default function Contact() {
     setStatus('sending');
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000)); // simulate delay
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
+
       setStatus('success');
       setFormData({ name: '', email: '', message: '' });
-    } catch {
+    } catch (error) {
+      console.error('Error sending message:', error);
       setStatus('error');
     }
   }
@@ -46,7 +60,7 @@ export default function Contact() {
             required
             value={formData.name}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 text-black focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
           />
         </label>
 
@@ -58,7 +72,7 @@ export default function Contact() {
             required
             value={formData.email}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 text-black focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
           />
         </label>
 
@@ -70,7 +84,7 @@ export default function Contact() {
             rows={5}
             value={formData.message}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 text-black focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
           />
         </label>
 
