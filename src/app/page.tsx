@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion, Variants, AnimatePresence } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import {
   FaRobot,
   FaDatabase,
@@ -32,26 +32,6 @@ const Home = () => {
   const [selectedService, setSelectedService] = React.useState<string | null>(null);
   const [expandedService, setExpandedService] = React.useState<string | null>(null);
 
-  const services = [
-    {
-      icon: <FaDatabase size={48} className="text-blue-600" />,
-      title: "ETL Automation",
-      desc: "Build efficient pipelines for extracting, transforming, and loading data...",
-      detail: "We create scalable ETL solutions that integrate data from multiple sources...",
-    },
-    {
-      icon: <FaChartLine size={48} className="text-purple-600" />,
-      title: "Power BI Dashboards",
-      desc: "Design insightful dashboards for real-time reporting...",
-      detail: "Custom Power BI reports with interactive visuals and real-time data updates...",
-    },
-    {
-      icon: <FaRobot size={48} className="text-pink-600" />,
-      title: "AI & Automation",
-      desc: "Use AI tools to automate workflows and boost productivity...",
-      detail: "From chatbots to automated data pipelines, we help you save hours every week...",
-    },
-  ];
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans">
       {/* Hero Section with Particles */}

@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 
 
@@ -98,11 +99,12 @@ export default function About() {
               variants={fadeUp}
               custom={i + 7}
             >
-              <img
+              <Image
                 src={photo}
                 alt={name}
+                width={128}
+                height={128}
                 className="w-32 h-32 rounded-full object-cover mb-4"
-                loading="lazy"
               />
               <h3 className="text-xl font-semibold">{name}</h3>
               <p className="text-blue-600 mb-3">{role}</p>
