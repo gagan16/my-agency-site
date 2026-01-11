@@ -15,10 +15,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'GJS Corp',
   description: 'Automation and data consulting',
 };
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -26,9 +27,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="flex flex-col min-h-screen">
+      <body className={`${geistSans.variable} ${geistMono.variable} flex flex-col min-h-screen`}>
         <Header />
         <main className="flex-grow">{children}</main>
+        <Footer />
         <ChatWidget />
       </body>
     </html>

@@ -20,11 +20,6 @@ const initialSystemMessage: Message = {
 };
 
 export default function ChatWidget() {
-    // Don't render if chat is disabled
-    if (!CHAT_ENABLED) {
-        return null;
-    }
-
     const [open, setOpen] = useState(false);
     const [messages, setMessages] = useState<Message[]>(() => {
         try {
@@ -43,6 +38,11 @@ export default function ChatWidget() {
         localStorage.setItem("sqli_chat_history", JSON.stringify(messages));
         listRef.current?.scrollTo({ top: listRef.current.scrollHeight, behavior: "smooth" });
     }, [messages]);
+
+    // Don't render if chat is disabled
+    if (!CHAT_ENABLED) {
+        return null;
+    }
 
     function addLocalMessage(role: Message["role"], content: string) {
         setMessages((m) => [...m, { id: `${role}-${Date.now()}`, role, content }]);
@@ -95,8 +95,9 @@ export default function ChatWidget() {
                     setError("Note: AI service is currently using fallback mode due to quota limits.");
                 }
             }
-        } catch (err: any) {
-            setError(err.message ?? "Network error");
+        } catch (err) {
+            const errorMessage = err instanceof Error ? err.message : "Network error";
+            setError(errorMessage);
             addLocalMessage("assistant", "Network error — please try again.");
         } finally {
             setSending(false);
