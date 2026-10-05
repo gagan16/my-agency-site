@@ -169,7 +169,7 @@ export default function ChatWidget() {
                         <div ref={listRef} className="flex-1 overflow-auto p-4 space-y-4" style={{ maxHeight: "60vh" }}>
                             {messages.filter(m => m.role !== "system").map((m) => (
                                 <div key={m.id} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
-                                    <div className={`${m.role === "user" ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-900"} rounded-lg px-4 py-2 max-w-[80%]`}>
+                                    <div className={`${m.role === "user" ? "bg-blue-100 text-gray-900" : "bg-gray-100 text-gray-900"} rounded-lg px-4 py-2 max-w-[80%]`}>
                                         <div className="text-sm whitespace-pre-wrap">{m.content}</div>
                                     </div>
                                 </div>
@@ -189,7 +189,7 @@ export default function ChatWidget() {
                                     value={input}
                                     onChange={(e) => setInput(e.target.value)}
                                     placeholder={CHAT_PLACEHOLDER}
-                                    className="flex-1 rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-300"
+                                    className="flex-1 rounded-lg border border-gray-200 px-3 py-2 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300"
                                 />
                                 <button
                                     type="submit"

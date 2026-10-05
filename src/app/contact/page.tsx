@@ -53,38 +53,38 @@ export default function Contact() {
         className="bg-white p-8 rounded-2xl shadow-xl max-w-xl mx-auto space-y-6 border border-gray-100"
       >
         <label className="block text-left">
-          <span className="block mb-1 font-semibold">Name</span>
+          <span className="block mb-1 font-semibold text-gray-900">Name</span>
           <input
             name="name"
             type="text"
             required
             value={formData.name}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 text-black focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
           />
         </label>
 
         <label className="block text-left">
-          <span className="block mb-1 font-semibold">Email</span>
+          <span className="block mb-1 font-semibold text-gray-900">Email</span>
           <input
             name="email"
             type="email"
             required
             value={formData.email}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 text-black focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
           />
         </label>
 
         <label className="block text-left">
-          <span className="block mb-1 font-semibold">Message</span>
+          <span className="block mb-1 font-semibold text-gray-900">Message</span>
           <textarea
             name="message"
             required
             rows={5}
             value={formData.message}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 text-black focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
           />
         </label>
 
